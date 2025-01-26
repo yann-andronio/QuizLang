@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        custom:['MyCustomFont', 'sans-serif'],
+        quizlang:['MyCustomFont', 'sans-serif'],
       }
     },
   },
