@@ -1,5 +1,6 @@
 import { Fragment } from "react/jsx-runtime"
 import Headerfirstpage from "../../components/headerfirstpage/Headerfirstpage"
+import Herofirstpage from "../../components/herofirstpage/Herofirstpage"
 
 const Firstpage : React.FC<{}> = () => {
     return (
@@ -7,6 +8,9 @@ const Firstpage : React.FC<{}> = () => {
             <div className="header">
                 <Headerfirstpage />
             </div>
+            <main>
+                <Herofirstpage/>
+            </main>
 
         </Fragment>
     )

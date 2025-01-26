@@ -2,13 +2,12 @@ import { Fragment } from "react/jsx-runtime";
 import { Link } from "react-router-dom";
 import { FiLogIn, FiHelpCircle } from "react-icons/fi";
 
-import s from "./headerfirstpage.module.css";
 
 const Headerfirstpage: React.FC<{}> = () => {
   return (
     <Fragment>
       <header>
-        <nav className={`${s.navbar}  fixed w-full z-50`}>
+        <nav className={` w-full z-50`}>
           <div className="  bg-[#e0e5df]  ">
             <div className="flex  items-center justify-between px-8">
               <div className="flex items-center ">
