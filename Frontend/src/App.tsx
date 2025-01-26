@@ -1,14 +1,18 @@
 import { Fragment } from 'react';
 import s from "./App.module.css";
-import Message from './components/message/Message';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import Firstpage from './pages/firstpage/Firstpage';
 
 function App() {
   return (
     <Fragment>
-      <div className={`${s.titre}`}>
-      
-      </div>
-      <Message name="Koto" age={10} arme={["Épée", "Bouclier"]} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Firstpage />} />
+          
+        </Routes>
+      </BrowserRouter>
+    
     </Fragment>
   );
 }
