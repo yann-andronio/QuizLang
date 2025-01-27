@@ -6,7 +6,7 @@ import Footerfirstpage from "../../components/footerfirstpage/Footerfirstpage";
 const Firstpage: React.FC<{}> = () => {
   return (
     <Fragment>
-      <div className="firstpage relative lg:h-screen md:h-screen  overflow-hidden bg-[#f5f5f5]">
+      <div className="firstpage relative lg:h-screen md:h-screen  overflow-hidden bg-custom-gradient">
         <div className="header">
           <Headerfirstpage />
         </div>

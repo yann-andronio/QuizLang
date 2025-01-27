@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily:{
         quizlang:['MyCustomFont', 'sans-serif'],
+      } , 
+      backgroundImage:{
+        'custom-gradient' : 'linear-gradient(135deg , #d3d3d3 , #f5f5f5)',
       }
     },
   },

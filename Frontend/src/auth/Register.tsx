@@ -6,30 +6,29 @@ import { FiUserPlus } from "react-icons/fi";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { FieldValues ,useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-
+import { FiLogIn } from "react-icons/fi";
 
 interface User {
+  name: string;
   email: string;
   password: string;
 }
 
-const Login: React.FC = () => {
+const Register: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [dataUser, setDataUser] = useState<User[]>([]);
 
   const ValidationSchema = yup.object({
+    name: yup.string().required("Donnez votre nom"),
     email: yup
-    .string()
-    .email("Veuillez entrer un e-mail valide") 
-    .required("L'e-mail est obligatoire") , 
+      .string()
+      .email("Veuillez entrer un e-mail valide") // Validation de l'e-mail
+      .required("L'e-mail est obligatoire"),
     password: yup.string().required("Votre mot de passe est obligatoire"),
-  
   });
-
 
   const {
     register,
@@ -49,7 +48,6 @@ const Login: React.FC = () => {
       .catch((error) => {
         console.error("Erreur lors de l'envoi des données :", error);
       });
-   
   };
 
   return (
@@ -68,9 +66,9 @@ const Login: React.FC = () => {
             </Link>
 
             <motion.img
-              src="./assets/images/firstpage/perso2.png"
+              src="./assets/images/firstpage/perso5.png"
               alt="icone perso"
-              className=" absolute top-14 -rotate-12 left-0  "
+              className=" absolute bottom-0 -rotate-12 left-40  "
               width={210}
               animate={{
                 rotate: [-12, 12, -12], //Mouvement de rotation
@@ -83,10 +81,10 @@ const Login: React.FC = () => {
               }}
             />
             <motion.img
-              src="./assets/images/firstpage/interro.png"
+              src="./assets/images/firstpage/traduction.png"
               alt="icone perso"
               className=" absolute top-16 rotate-[25deg] right-16 "
-              width={125}
+              width={140}
               animate={{
                 y: [0, -10, 0], // Mouvement de haut en bas
                 rotate: [25],
@@ -99,9 +97,9 @@ const Login: React.FC = () => {
               }}
             />
             <motion.img
-              src="./assets/images/firstpage/perso3.png"
+              src="./assets/images/firstpage/perso4.png"
               alt="icone perso"
-              className=" absolute bottom-0 left-40  "
+              className=" absolute top-14 left-0  "
               width={210}
               animate={{
                 y: [0, -15, 0, -10, 0], // Mouvement vertical pour simuler le rebond
@@ -114,21 +112,20 @@ const Login: React.FC = () => {
               }}
             />
           </div>
-          <div className="p-8 rounded-2xl  max-w-3xl mx-auto">
+          <div className="p-8 rounded-2xl max-w-3xl mx-auto">
             <h1 className="text-4xl font-extrabold text-center mb-4 text-[#212529]">
-              Prêt à défier votre cerveau avec QuizLang ?
+              Rejoignez QuizLang et relevez des défis linguistiques passionnants
+              !
             </h1>
             <div className="text-lg text-gray-600 text-center space-y-4">
               <p>
-                Connectez-vous et plongez dans des défis linguistiques amusants
-                et interactifs !
+                Inscrivez-vous et plongez dans un univers de quiz interactifs
+                pour tester vos compétences en langues.
               </p>
+            
               <p>
-                Testez vos compétences avec des quiz, gagnez des points et
-                suivez vos progrès.
-              </p>
-              <p>
-                Rejoignez-nous et boostez votre niveau de langue en jouant !
+                Créez votre compte maintenant et commencez à jouer pour
+                débloquer de nouveaux défis !
               </p>
             </div>
           </div>
@@ -137,7 +134,7 @@ const Login: React.FC = () => {
         <div
           className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative`}
         >
-          <h2 className={` text-4xl font-bold mb-6 `}>Connexion</h2>
+          <h2 className={` text-4xl font-bold mb-6 `}>Inscription</h2>
 
           <form
             className={` rounded-lg p-8 mb-4 w-full max-w-lg`}
@@ -153,6 +150,21 @@ const Login: React.FC = () => {
               <h1 className="text-3xl font-semibold tracking-wider font-quizlang text-green-500 ">
                 QUIZLANG
               </h1>
+            </div>
+
+            <div className="mb-6 relative">
+              <input
+                type="texte"
+                id="name"
+                className="shadow-md border rounded-lg px-4 py-4 w-full text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                placeholder="Nom "
+                {...register("name")}
+              />
+              {errors.name && (
+                <p className="text-red-600 text-sm mt-1">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
 
             <div className="mb-6 relative">
@@ -200,14 +212,14 @@ const Login: React.FC = () => {
               type="submit"
               className="flex items-center justify-center space-x-2 text-lg bg-yellow-400 text-white rounded-lg px-8 py-4  font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 border-b-4 border-[#F1C40F] w-full"
             >
-              SE CONNECTER
+              CRÉER MON COMPTE
             </button>
           </form>
 
-          <Link to="/Register" className="absolute top-4 right-4 ml-4">
+          <Link to="/Login" className="absolute top-4 right-4 ml-4">
             <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">
-              <FiUserPlus className="text-lg" />
-              <span>S'inscrire</span>
+              <FiLogIn className="text-lg" />
+              <span>Se connecter</span>
             </button>
           </Link>
 
@@ -223,4 +235,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Register;
