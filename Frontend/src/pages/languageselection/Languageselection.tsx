@@ -1,6 +1,8 @@
 import { Fragment } from "react/jsx-runtime";
 import { motion } from "framer-motion";
-
+import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const languages = [
   { id: 1, name: "ANGLAIS", image: "./assets/images/firstpage/american.png" },
   { id: 2, name: "ALLEMAND", image: "./assets/images/firstpage/allemagne.png" },
@@ -9,11 +11,24 @@ const languages = [
 ];
 
 const Languageselection: React.FC<{}> = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState<number | null>(null);
+
+  const handleCardClick = () => {
+    if (selectedLanguage === null) {
+      toast.error("Vous devez choisir une langue avant de continuer !", {
+        position: "top-center",
+        autoClose: 5000,
+      });
+    } else {
+      console.log("Choix : ", selectedLanguage);
+    }
+  };
+
   return (
     <Fragment>
+      <ToastContainer />
       <div className="Bigbox bg-custom-gradient-phone "></div>
-      <div className=" relative flex flex-col justify-center     lg:h-screen md:h-screen mx-2 lg:mx-0 md:mx-0  overflow-hidden">
-        
+      <div className=" relative flex flex-col justify-center bg-custom-gradient-phone  lg:h-screen md:h-screen mx-2 lg:mx-0 md:mx-0  overflow-hidden">
         <h1 className="lg:text-5xl text-4xl font-extrabold text-center  text-[#0d1b2a] mb-8">
           Choisissez votre langue d'apprentissage
         </h1>
@@ -27,7 +42,10 @@ const Languageselection: React.FC<{}> = () => {
           {languages.map((language) => (
             <div
               key={language.id}
-              className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+              onClick={() => setSelectedLanguage(language.id)}
+              className={`flex flex-col items-center bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer ${
+                selectedLanguage === language.id ? "ring-4 ring-[#9f7126]" : ""
+              }`}
             >
               <img
                 src={language.image}
@@ -48,6 +66,15 @@ const Languageselection: React.FC<{}> = () => {
             Apprenez à votre rythme, où que vous soyez ! Rejoignez-nous et
             commencez dès maintenant.
           </p>
+        </div>
+
+        <div className="relative mt-6 flex justify-center">
+          <button
+            onClick={() => handleCardClick()}
+            className="flex mt-4 items-center space-x-2 text-lg bg-yellow-400 text-white rounded-lg px-8 py-4  font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 border-b-4 border-[#F1C40F]"
+          >
+            <span>C'est parti pour une nouvelle aventure linguistique !</span>
+          </button>
         </div>
 
         {/* decoration */}
