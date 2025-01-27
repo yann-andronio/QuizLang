@@ -70,8 +70,8 @@ const Login: React.FC = () => {
             <motion.img
               src="./assets/images/firstpage/perso2.png"
               alt="icone perso"
-              className=" absolute top-14 -rotate-12 left-0  "
-              width={210}
+              className=" absolute top-24 -rotate-12 left-0  "
+              width={250}
               animate={{
                 rotate: [-12, 12, -12], //Mouvement de rotation
               }}
@@ -85,8 +85,8 @@ const Login: React.FC = () => {
             <motion.img
               src="./assets/images/firstpage/interro.png"
               alt="icone perso"
-              className=" absolute top-16 rotate-[25deg] right-16 "
-              width={125}
+              className=" absolute top-28  rotate-[25deg] right-20 "
+              width={150}
               animate={{
                 y: [0, -10, 0], // Mouvement de haut en bas
                 rotate: [25],
@@ -102,7 +102,7 @@ const Login: React.FC = () => {
               src="./assets/images/firstpage/perso3.png"
               alt="icone perso"
               className=" absolute bottom-0 left-40  "
-              width={210}
+              width={250}
               animate={{
                 y: [0, -15, 0, -10, 0], // Mouvement vertical pour simuler le rebond
               }}
@@ -114,7 +114,7 @@ const Login: React.FC = () => {
               }}
             />
           </div>
-          <div className="p-8 rounded-2xl  max-w-3xl mx-auto">
+          <div className="p-8 rounded-2xl mt-24  max-w-3xl mx-auto">
             <h1 className="text-4xl font-extrabold text-center mb-4 text-[#212529]">
               Prêt à défier votre cerveau avec QuizLang ?
             </h1>
@@ -135,7 +135,7 @@ const Login: React.FC = () => {
         </div>
 
         <div
-          className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative`}
+          className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative bg-custom-gradient-phone lg:bg-none`}
         >
           <h2 className={` text-4xl font-bold mb-6 `}>Connexion</h2>
 
@@ -203,6 +203,12 @@ const Login: React.FC = () => {
               SE CONNECTER
             </button>
           </form>
+
+          <Link to="/" className="absolute top-4 left-4 block lg:hidden">
+            <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">
+              <RiArrowGoBackFill className="text-lg" />
+            </button>
+          </Link>
 
           <Link to="/Register" className="absolute top-4 right-4 ml-4">
             <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">

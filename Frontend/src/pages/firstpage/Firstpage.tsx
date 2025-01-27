@@ -6,14 +6,14 @@ import Footerfirstpage from "../../components/footerfirstpage/Footerfirstpage";
 const Firstpage: React.FC<{}> = () => {
   return (
     <Fragment>
-      <div className="firstpage relative lg:h-screen md:h-screen  overflow-hidden bg-custom-gradient">
+      <div className="firstpage relative lg:h-screen   overflow-hidden bg-custom-gradient">
         <div className="header">
           <Headerfirstpage />
         </div>
-        <main className=" mb-8 lg:mb-0 ">
+        <main className=" mb-14 lg:mb-0 mx-6 lg:mx-0 ">
           <Herofirstpage />
         </main>
-        <div className="footer  ">
+        <div className="footer lg:absolute w-full bottom-0  ">
           <Footerfirstpage />
         </div>
       </div>

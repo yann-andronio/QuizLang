@@ -69,7 +69,7 @@ const Register: React.FC = () => {
               src="./assets/images/firstpage/perso5.png"
               alt="icone perso"
               className=" absolute bottom-0 -rotate-12 left-40  "
-              width={210}
+              width={250}
               animate={{
                 rotate: [-12, 12, -12], //Mouvement de rotation
               }}
@@ -84,7 +84,7 @@ const Register: React.FC = () => {
               src="./assets/images/firstpage/traduction.png"
               alt="icone perso"
               className=" absolute top-16 rotate-[25deg] right-16 "
-              width={140}
+              width={150}
               animate={{
                 y: [0, -10, 0], // Mouvement de haut en bas
                 rotate: [25],
@@ -100,7 +100,7 @@ const Register: React.FC = () => {
               src="./assets/images/firstpage/perso4.png"
               alt="icone perso"
               className=" absolute top-14 left-0  "
-              width={210}
+              width={250}
               animate={{
                 y: [0, -15, 0, -10, 0], // Mouvement vertical pour simuler le rebond
               }}
@@ -112,7 +112,7 @@ const Register: React.FC = () => {
               }}
             />
           </div>
-          <div className="p-8 rounded-2xl max-w-3xl mx-auto">
+          <div className="p-8 rounded-2xl mt-16 max-w-3xl mx-auto">
             <h1 className="text-4xl font-extrabold text-center mb-4 text-[#212529]">
               Rejoignez QuizLang et relevez des défis linguistiques passionnants
               !
@@ -122,7 +122,7 @@ const Register: React.FC = () => {
                 Inscrivez-vous et plongez dans un univers de quiz interactifs
                 pour tester vos compétences en langues.
               </p>
-            
+
               <p>
                 Créez votre compte maintenant et commencez à jouer pour
                 débloquer de nouveaux défis !
@@ -132,8 +132,8 @@ const Register: React.FC = () => {
         </div>
 
         <div
-          className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative`}
-        >
+          className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative bg-custom-gradient-phone lg:bg-none`}
+          >
           <h2 className={` text-4xl font-bold mb-6 `}>Inscription</h2>
 
           <form
@@ -216,6 +216,12 @@ const Register: React.FC = () => {
             </button>
           </form>
 
+          <Link to="/" className="absolute top-4 left-4 block lg:hidden">
+            <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">
+              <RiArrowGoBackFill className="text-lg" />
+            </button>
+          </Link>
+          
           <Link to="/Login" className="absolute top-4 right-4 ml-4">
             <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">
               <FiLogIn className="text-lg" />

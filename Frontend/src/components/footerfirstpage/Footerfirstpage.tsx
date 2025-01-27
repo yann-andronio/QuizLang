@@ -3,7 +3,7 @@ import { Fragment } from "react/jsx-runtime";
 const Footerfirstpage: React.FC<{}> = () => {
   return (
     <Fragment>
-      <footer className="bg-[#e0e5df] lg:h-screen md:h-screen w-full">
+      <footer className="bg-[#e0e5df]  w-full">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center p-4">
           <div className="lang1 flex gap-2 justify-center items-center cursor-pointer">
             <img
