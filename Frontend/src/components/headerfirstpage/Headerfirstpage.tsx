@@ -29,12 +29,12 @@ const Headerfirstpage: React.FC<{}> = () => {
                   </button>
                 </Link>
 
-                <div className="relative ml-4">
+                <Link to="/Login" className="relative ml-4">
                   <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">
                     <FiLogIn className="text-lg" />
                     <span>Connexion</span>
                   </button>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

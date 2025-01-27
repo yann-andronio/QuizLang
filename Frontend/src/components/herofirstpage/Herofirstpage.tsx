@@ -24,7 +24,7 @@ const Herofirstpage: React.FC<{}> = () => {
               plateforme ludique.
             </p>
             <div className="relative mt-6 flex justify-center">
-              <button className="flex items-center space-x-2 text-lg bg-yellow-400 text-white rounded-lg px-8 py-4  font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 border-b-4 border-[#F1C40F]">
+              <button className="flex mt-4 items-center space-x-2 text-lg bg-yellow-400 text-white rounded-lg px-8 py-4  font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 border-b-4 border-[#F1C40F]">
                 <span>Rejoindre l'aventure</span>
               </button>
             </div>
