@@ -115,7 +115,7 @@ const Login: React.FC = () => {
             />
           </div>
           <div className="p-8 rounded-2xl mt-24  max-w-3xl mx-auto">
-            <h1 className="text-4xl font-extrabold text-center mb-4 text-[#212529]">
+            <h1 className="text-4xl font-extrabold text-center mb-4 text-[#0d1b2a]">
               Prêt à défier votre cerveau avec QuizLang ?
             </h1>
             <div className="text-lg text-gray-600 text-center space-y-4">
@@ -137,7 +137,7 @@ const Login: React.FC = () => {
         <div
           className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative bg-custom-gradient-phone lg:bg-none`}
         >
-          <h2 className={` text-4xl font-bold mb-6 `}>Connexion</h2>
+          <h2 className={` text-4xl font-bold mb-6 text-[#0d1b2a] `}>Connexion</h2>
 
           <form
             className={` rounded-lg p-8 mb-4 w-full max-w-lg`}

@@ -1,5 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Herofirstpage: React.FC<{}> = () => {
   return (
@@ -14,20 +15,20 @@ const Herofirstpage: React.FC<{}> = () => {
         </div>
         <div className="right relative flex-1 flex justify-center items-center">
           <div className="text-center space-y-4">
-            <h1 className="text-4xl font-extrabold text-black leading-tight md:text-5xl">
+            <h1 className="text-4xl font-extrabold text-[#0d1b2a] leading-tight md:text-5xl">
               Apprenez de nouvelles langues avec{" "}
               <span className="text-green-400 font-quizlang">QUIZLANG</span> ! 🚀
             </h1>
-            <p className="text-lg text-black opacity-80 md:text-xl">
+            <p className="text-lg text-[#0d1b2a] opacity-80 md:text-xl">
               Relevez des défis quotidiens, améliorez vos compétences
               linguistiques et devenez un expert en langues avec notre
               plateforme ludique.
             </p>
-            <div className="relative mt-6 flex justify-center">
+            <Link to="/selectlanguage" className="relative mt-6 flex justify-center">
               <button className="flex mt-4 items-center space-x-2 text-lg bg-yellow-400 text-white rounded-lg px-8 py-4  font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:ring-offset-2 border-b-4 border-[#F1C40F]">
                 <span>Rejoindre l'aventure</span>
               </button>
-            </div>
+            </Link>
           </div>
           <motion.img
             src="./assets/images/firstpage/interro.png"

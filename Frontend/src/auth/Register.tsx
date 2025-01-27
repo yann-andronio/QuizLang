@@ -113,7 +113,7 @@ const Register: React.FC = () => {
             />
           </div>
           <div className="p-8 rounded-2xl mt-16 max-w-3xl mx-auto">
-            <h1 className="text-4xl font-extrabold text-center mb-4 text-[#212529]">
+            <h1 className="text-4xl font-extrabold text-center mb-4 text-[#0d1b2a]">
               Rejoignez QuizLang et relevez des défis linguistiques passionnants
               !
             </h1>
@@ -134,7 +134,7 @@ const Register: React.FC = () => {
         <div
           className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative bg-custom-gradient-phone lg:bg-none`}
           >
-          <h2 className={` text-4xl font-bold mb-6 `}>Inscription</h2>
+          <h2 className={` text-4xl font-bold mb-6  text-[#0d1b2a]`}>Inscription</h2>
 
           <form
             className={` rounded-lg p-8 mb-4 w-full max-w-lg`}
