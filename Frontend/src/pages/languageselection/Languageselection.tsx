@@ -11,8 +11,10 @@ const languages = [
 const Languageselection: React.FC<{}> = () => {
   return (
     <Fragment>
-      <div className=" relative flex flex-col justify-center  h-screen bg-custom-gradient-phone overflow-hidden">
-        <h1 className="text-5xl font-extrabold text-center text-[#0d1b2a] mb-8">
+      <div className="Bigbox bg-custom-gradient-phone "></div>
+      <div className=" relative flex flex-col justify-center     lg:h-screen md:h-screen mx-2 lg:mx-0 md:mx-0  overflow-hidden">
+        
+        <h1 className="lg:text-5xl text-4xl font-extrabold text-center  text-[#0d1b2a] mb-8">
           Choisissez votre langue d'apprentissage
         </h1>
 
@@ -53,7 +55,7 @@ const Languageselection: React.FC<{}> = () => {
         <motion.img
           src="./assets/images/firstpage/perso5.png"
           alt="icone perso"
-          className=" absolute bottom-0 -rotate-12 left-0  "
+          className=" absolute -bottom-8 -rotate-12 left-0 hidden lg:block md:block    "
           width={250}
           animate={{
             rotate: [-12, 12, -12], //Mouvement de rotation
@@ -69,7 +71,7 @@ const Languageselection: React.FC<{}> = () => {
         <motion.img
           src="./assets/images/firstpage/traduction.png"
           alt="icone perso"
-          className=" absolute top-16 rotate-[25deg] right-16 "
+          className=" absolute top-16 rotate-[25deg] right-16 hidden lg:block md:block    "
           width={150}
           animate={{
             y: [0, -10, 0], // Mouvement de haut en bas
@@ -84,9 +86,9 @@ const Languageselection: React.FC<{}> = () => {
         />
 
         <motion.img
-          src="./assets/images/firstpage/perso4.png"
+          src="./assets/images/firstpage/perso2.png"
           alt="icone perso"
-          className=" absolute top-0 left-0  "
+          className=" absolute top-0 left-0  hidden lg:block md:block  "
           width={250}
           animate={{
             y: [0, -15, 0, -10, 0], // Mouvement vertical pour simuler le rebond
@@ -102,7 +104,7 @@ const Languageselection: React.FC<{}> = () => {
         <motion.img
           src="./assets/images/firstpage/interro.png"
           alt="icone perso"
-          className=" absolute bottom-0  rotate-[25deg] right-0 "
+          className=" absolute bottom-7 rotate-[25deg] right-20 hidden lg:block md:block    "
           width={150}
           animate={{
             y: [0, -10, 0], // Mouvement de haut en bas
