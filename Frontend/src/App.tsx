@@ -4,6 +4,7 @@ import Firstpage from './pages/firstpage/Firstpage';
 import Languageselection from './pages/languageselection/Languageselection';
 import Login from './auth/Login';
 import Register from './auth/Register';
+import Help from './pages/help/Help';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Firstpage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
+          <Route path="/Help" element={<Help />} />
           <Route path="/selectlanguage" element={<Languageselection />} />
           
         </Routes>

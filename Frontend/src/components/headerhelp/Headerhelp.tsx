@@ -1,8 +1,9 @@
 import { Fragment } from "react/jsx-runtime";
 import { Link } from "react-router-dom";
-import { FiLogIn, FiHelpCircle } from "react-icons/fi";
+import { FiLogIn } from "react-icons/fi";
+import { RiArrowGoBackFill } from "react-icons/ri";
 
-const Headerfirstpage: React.FC<{}> = () => {
+const Headerhelp: React.FC<{}> = () => {
   return (
     <Fragment>
       <header>
@@ -22,10 +23,10 @@ const Headerfirstpage: React.FC<{}> = () => {
               </div>
 
               <div className=" flex items-center  ">
-                <Link to="/Help" className="relative hidden lg:block">
+                <Link to="/" className="relative hidden lg:block">
                   <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">
-                    <FiHelpCircle className="text-xl" aria-hidden="true" />
-                    <span>Aide</span>
+                    <RiArrowGoBackFill className="text-xl" aria-hidden="true" />
+                    
                   </button>
                 </Link>
 
@@ -44,4 +45,4 @@ const Headerfirstpage: React.FC<{}> = () => {
   );
 };
 
-export default Headerfirstpage;
+export default Headerhelp;
