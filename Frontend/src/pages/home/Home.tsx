@@ -1,11 +1,13 @@
 import { Fragment } from "react/jsx-runtime";
-import Headerfirstpage from "../../components/headerfirstpage/Headerfirstpage";
-import Herofirstpage from "../../components/herofirstpage/Herofirstpage";
-import Footerfirstpage from "../../components/footerfirstpage/Footerfirstpage";
+import Headerhome from "../../components/headerhome/Headerhome";
+
 
 const Home: React.FC<{}> = () => {
   return (
     <Fragment>
+    <div className="header">
+        <Headerhome />
+    </div>
      
     </Fragment>
   );
