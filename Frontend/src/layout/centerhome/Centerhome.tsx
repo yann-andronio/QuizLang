@@ -4,7 +4,7 @@ import Cerclebuttonlevel from "../../components/cerclebuttonlevel/Cerclebuttonle
 const Centerhome: React.FC<{}> = () => {
   return (
     <Fragment>
-      <div className=" w-full bigboxcenter flex  flex-col">
+      <div className=" w-full bigboxcenter flex   flex-col">
         <div className="chapitre ">
           <Chapitrecenterhome />
         </div>

@@ -14,6 +14,10 @@ const Cerclebuttonlevel: React.FC = () => {
     { title: "Acheter un ticket", lesson: "Leçon 3 sur 4", path: "/profile" },
     { title: "Réserver un hôtel", lesson: "Leçon 1 sur 4", path: "/settings" },
     { title: "Trouver un taxi", lesson: "Leçon 4 sur 4", path: "/dashboard" },
+        { title: "Commande au café", lesson: "Leçon 2 sur 4", path: "/" },
+    { title: "Acheter un ticket", lesson: "Leçon 3 sur 4", path: "/profile" },
+    { title: "Réserver un hôtel", lesson: "Leçon 1 sur 4", path: "/settings" },
+    { title: "Trouver un taxi", lesson: "Leçon 4 sur 4", path: "/dashboard" },
   ];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -29,7 +33,7 @@ const Cerclebuttonlevel: React.FC = () => {
               onClick={() =>
                 setActiveIndex(index === activeIndex ? null : index)
               }
-              className={`relative z-0 flex items-center justify-center bg-green-500 text-white rounded-full w-20 h-20 text-sm font-medium shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168] ${translateX}`}
+              className={`relative z-0 flex items-center justify-center bg-[#58CC02] text-white rounded-full w-20 h-20 text-sm font-medium shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#46A302] ${translateX}`}
             >
               <FaStar size={40} />
             </button>

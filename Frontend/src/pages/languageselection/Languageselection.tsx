@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 const languages = [
   { id: 1, name: "ANGLAIS", image: "./assets/images/firstpage/american.png" },
   { id: 2, name: "ALLEMAND", image: "./assets/images/firstpage/allemagne.png" },
@@ -12,6 +13,7 @@ const languages = [
 
 const Languageselection: React.FC<{}> = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   const handleCardClick = () => {
     if (selectedLanguage === null) {
@@ -19,8 +21,10 @@ const Languageselection: React.FC<{}> = () => {
         position: "top-center",
         autoClose: 5000,
       });
+   
     } else {
       console.log("Choix : ", selectedLanguage);
+      navigate("/home");
     }
   };
 

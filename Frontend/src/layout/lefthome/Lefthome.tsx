@@ -1,58 +1,69 @@
-import { Fragment } from "react/jsx-runtime";
-import { FaUser, FaUsers, FaBoxOpen, FaShoppingCart } from "react-icons/fa";
+import { Fragment } from "react";
+import {
+  FaBook,
+  FaEnvelope,
+  FaStore,
+  FaUser,
+  FaQuestionCircle,
+} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import s from "./lefthome.module.css";
 
-const Lefthome: React.FC<{}> = () => {
-  interface NavItem {
-    path: string;
-    name: string;
-    icon: JSX.Element;
-  }
-
-  const navItems: NavItem[] = [
+const Lefthome: React.FC = () => {
+  const navItems = [
     {
-      path: "/",
-      name: "Accueil",
-      icon: <FaUser size={25} />,
+      path: "/home",
+      name: "Cours",
+      icon: <FaBook size={40} />,
+      image: "cours",
     },
     {
       path: "/profile",
-      name: "Profil",
-      icon: <FaUser size={25} />,
+      name: "Message",
+      icon: <FaEnvelope size={40} />,
+      image: "chat1",
     },
     {
       path: "/clients",
-      name: "Clients",
-      icon: <FaUsers size={25} />,
+      name: "Boutique",
+      icon: <FaStore size={40} />,
+      image: "cours",
     },
     {
       path: "/products",
-      name: "Produits",
-      icon: <FaBoxOpen size={25} />,
+      name: "Profil",
+      icon: <FaUser size={40} />,
+      image: "cours",
     },
     {
       path: "/commande",
-      name: "Commandes",
-      icon: <FaShoppingCart size={25} />,
+      name: "Aide",
+      icon: <FaQuestionCircle size={40} />,
+      image: "cours",
     },
   ];
 
+
   return (
     <Fragment>
-     
-      <nav className={` ${s.navbar} relative  `}>
-        <ul className={`${s.navlist} flex flex-col gap-3 mt-8`}>
+      <nav className={s.navbar}>
+        <ul className={`${s.navlist} flex flex-col gap-4 mt-6`}>
           {navItems.map((item, index) => (
-            <li key={index} className={``}>
+            <li key={index} className={s.listItem}>
               <NavLink
                 to={item.path}
-                className={(nav) => `${nav.isActive ? s.active : s.inactive} ${s.link}`}
+                className={({ isActive }) =>
+                  `${isActive ? s.active : s.inactive} ${s.link}`
+                }
               >
-                {item.icon}
-                <span
-                  className={` font-normal transition-all duration-500 absolute left-12  `}
-                >
+                <div className={s.icon}>{item.icon}</div>
+                {/* <img
+                  src={`./assets/images/firstpage/${item?.image}.png`}
+                  className={`w-1/2 ${s.icon}`}
+                  alt=""
+                /> */}
+
+                <span className={`${s.text} font-normal text-lg`}>
                   {item.name}
                 </span>
               </NavLink>
