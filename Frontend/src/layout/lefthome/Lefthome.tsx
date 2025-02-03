@@ -30,7 +30,7 @@ const Lefthome: React.FC = () => {
       image: "cours",
     },
     {
-      path: "/products",
+      path: "/profil",
       name: "Profil",
       icon: <FaUser size={40} />,
       image: "cours",
