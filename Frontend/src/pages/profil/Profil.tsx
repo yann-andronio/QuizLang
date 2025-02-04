@@ -7,7 +7,7 @@ const Profil: React.FC = () => {
     <Fragment>
       <div className="parents relative bg-[#F8FAF5] flex h-screen ">
         <div
-          className={`  fixed top-0 left-0 min-h-screen  bg-[#F8FAF5]   flex flex-col items-center p-5  border-r-2   `}
+          className={` hidden lg:flex  fixed top-0 left-0 min-h-screen  bg-[#F8FAF5]    flex-col items-center p-5  border-r-2   `}
         >
           <h1 className="text-3xl font-semibold tracking-wider font-quizlang text-green-500  ">
             QUIZLANG
@@ -16,7 +16,7 @@ const Profil: React.FC = () => {
         </div>
 
         <div
-          className={` px-44 rigthprofil p-8 ml-60 h-fit   w-[100%]  bg-[#F8FAF5]  `}
+          className={` px-0 lg:px-44 rigthprofil p-8 ml-0  lg:ml-60 h-fit   w-[100%]  bg-[#F8FAF5]  `}
         >
           <Rigthprofil />
         </div>

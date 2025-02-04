@@ -7,6 +7,8 @@ import Register from './auth/Register';
 import Help from './pages/help/Help';
 import Home from './pages/home/Home';
 import Profil from './pages/profil/Profil';
+import Message from './pages/message/Message';
+import Levelpage from './pages/levelpage/Levelpage';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
           <Route path="/Help" element={<Help />} />
           <Route path="/selectlanguage" element={<Languageselection />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/message" element={<Message />} />
           <Route path="/profil" element={<Profil />} />
+          <Route path="/levelpage" element={<Levelpage />} />
           
         </Routes>
       </BrowserRouter>

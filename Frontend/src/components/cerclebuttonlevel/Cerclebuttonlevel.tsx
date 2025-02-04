@@ -10,14 +10,14 @@ const Cerclebuttonlevel: React.FC = () => {
   }
 
   const levelbutton: Level[] = [
-    { title: "Commande au café", lesson: "Leçon 2 sur 4", path: "/" },
-    { title: "Acheter un ticket", lesson: "Leçon 3 sur 4", path: "/profile" },
-    { title: "Réserver un hôtel", lesson: "Leçon 1 sur 4", path: "/settings" },
-    { title: "Trouver un taxi", lesson: "Leçon 4 sur 4", path: "/dashboard" },
-        { title: "Commande au café", lesson: "Leçon 2 sur 4", path: "/" },
-    { title: "Acheter un ticket", lesson: "Leçon 3 sur 4", path: "/profile" },
-    { title: "Réserver un hôtel", lesson: "Leçon 1 sur 4", path: "/settings" },
-    { title: "Trouver un taxi", lesson: "Leçon 4 sur 4", path: "/dashboard" },
+    { title: "Commande au café", lesson: "Leçon 2 sur 4", path: "/levelpage" },
+    { title: "Acheter un ticket", lesson: "Leçon 3 sur 4", path: "/levelpage" },
+    { title: "Réserver un hôtel", lesson: "Leçon 1 sur 4", path: "/levelpage" },
+    { title: "Trouver un taxi", lesson: "Leçon 4 sur 4", path: "/levelpage" },
+    { title: "Commande au café", lesson: "Leçon 2 sur 4", path: "/levelpage" },
+    { title: "Acheter un ticket", lesson: "Leçon 3 sur 4", path: "/levelpage" },
+    { title: "Réserver un hôtel", lesson: "Leçon 1 sur 4", path: "/levelpage" },
+    { title: "Trouver un taxi", lesson: "Leçon 4 sur 4", path: "/levelpage" },
   ];
 
   const [activeIndex, setActiveIndex] = useState<number | null>(null);

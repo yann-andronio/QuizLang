@@ -13,9 +13,9 @@ const Rigthprofil: React.FC = () => {
   return (
     <Fragment>
       <div className="header flex w-full">
-        <div className="parents flex w-full justify-between border-b-2 border-[#B0BEC5] pb-8">
+        <div className="parents md:ml-10  flex w-full justify-center lg:justify-between md:justify-between  lg:border-b-2 lg:border-[#B0BEC5] pb-8">
           <div className="box1 flex gap-5">
-            <div className="level flex justify-center items-center">
+            <div className="level md:flex  justify-center items-center hidden lg:flex">
               <h1 className="text-6xl w-36 h-36 font-bold border-2 border-dashed border-[#B0BEC5] rounded-full flex justify-center text-[#B0BEC5] items-center">
                 0
               </h1>
@@ -38,14 +38,14 @@ const Rigthprofil: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="box2">
+          {/* <div className="box2">
             <Link to="/Login" className="relative ml-4">
               <button className="flex items-center space-x-2 bg-green-500 text-white rounded-lg px-6 py-3 text-sm font-medium shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-offset-2 border-b-4 border-[#3db168]">
                 <FiLogIn className="text-lg" />
                 <span>modifier</span>
               </button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 

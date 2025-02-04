@@ -18,17 +18,17 @@ const Lefthome: React.FC = () => {
       image: "cours",
     },
     {
-      path: "/profile",
+      path: "/message",
       name: "Message",
       icon: <FaEnvelope size={40} />,
       image: "chat1",
     },
-    {
-      path: "/clients",
-      name: "Boutique",
-      icon: <FaStore size={40} />,
-      image: "cours",
-    },
+    // {
+    //   path: "/clients",
+    //   name: "Boutique",
+    //   icon: <FaStore size={40} />,
+    //   image: "cours",
+    // },
     {
       path: "/profil",
       name: "Profil",
@@ -36,7 +36,7 @@ const Lefthome: React.FC = () => {
       image: "cours",
     },
     {
-      path: "/commande",
+      path: "/help",
       name: "Aide",
       icon: <FaQuestionCircle size={40} />,
       image: "cours",
