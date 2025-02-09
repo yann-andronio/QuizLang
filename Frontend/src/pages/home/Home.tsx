@@ -16,7 +16,7 @@ const Home: React.FC = () => {
           <Lefthome />
         </div>
 
-        <div className={` center p-8 ml-0 lg:ml-60 h-fit   w-[100%] flex-1 bg-[#F8FAF5]  lg:mr-[40rem] mr-0  `}>
+        <div className={` center  p-8 ml-0 lg:ml-60 h-fit   w-[100%] flex-1 bg-[#F8FAF5]  lg:mr-[40rem] mr-0  `}>
           <Centerhome />
         </div>
 
