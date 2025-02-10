@@ -11,7 +11,7 @@ const Headerfirstpage: React.FC<{}> = () => {
             <div className="flex  items-center justify-between text-center px-3 lg:px-8 py-4 lg:py-0">
               <div className="flex items-center ">
                 <img
-                  src="./assets/images/firstpage/logo.png"
+                  src="/assets/images/firstpage/logo.png"
                   className="hidden lg:block "
                   alt="logo"
                   width={90}

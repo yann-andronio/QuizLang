@@ -10,6 +10,7 @@ import { FieldValues, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FiLogIn } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 interface User {
   name: string;
@@ -20,6 +21,7 @@ interface User {
 const Register: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [dataUser, setDataUser] = useState<User[]>([]);
+  const navigate = useNavigate();
 
   const ValidationSchema = yup.object({
     name: yup.string().required("Donnez votre nom"),
@@ -39,11 +41,12 @@ const Register: React.FC = () => {
 
   const onSubmit = (data: FieldValues) => {
     axios
-      .post("http://localhost:3000/users", data)
+      .post("http://localhost:3000/auth/register", data)
       .then((res) => {
         console.log(res.data);
         setDataUser((prevData) => [...prevData, res.data]);
         reset();
+        navigate("/login");
       })
       .catch((error) => {
         console.error("Erreur lors de l'envoi des données :", error);

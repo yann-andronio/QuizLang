@@ -6,11 +6,10 @@ import { FiUserPlus } from "react-icons/fi";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { FieldValues ,useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
-
+import { useNavigate } from "react-router-dom";
 
 interface User {
   email: string;
@@ -20,16 +19,16 @@ interface User {
 const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [dataUser, setDataUser] = useState<User[]>([]);
+  const navigate = useNavigate();
+  const [loginError, setLoginError] = useState("");
 
   const ValidationSchema = yup.object({
     email: yup
-    .string()
-    .email("Veuillez entrer un e-mail valide") 
-    .required("L'e-mail est obligatoire") , 
+      .string()
+      .email("Veuillez entrer un e-mail valide")
+      .required("L'e-mail est obligatoire"),
     password: yup.string().required("Votre mot de passe est obligatoire"),
-  
   });
-
 
   const {
     register,
@@ -40,16 +39,23 @@ const Login: React.FC = () => {
 
   const onSubmit = (data: FieldValues) => {
     axios
-      .post("http://localhost:3000/users", data)
+      .post("http://localhost:3000/auth/login", data)
       .then((res) => {
         console.log(res.data);
         setDataUser((prevData) => [...prevData, res.data]);
         reset();
+        navigate("/selectlanguage");
       })
       .catch((error) => {
         console.error("Erreur lors de l'envoi des données :", error);
+        if (error.response) {
+          setLoginError(
+            error.response.data.message || "Une erreur est survenue"
+          );
+        } else {
+          setLoginError("Erreur de connexion");
+        }
       });
-   
   };
 
   return (
@@ -137,13 +143,15 @@ const Login: React.FC = () => {
         <div
           className={`  rigth w-full flex-1  lg:w-1/2 flex flex-col justify-center items-center relative bg-custom-gradient-phone lg:bg-none`}
         >
-          <h2 className={` text-4xl font-bold mb-6 text-[#0d1b2a] `}>Connexion</h2>
+          <h2 className={` text-4xl font-bold mb-6 text-[#0d1b2a] `}>
+            Connexion
+          </h2>
 
           <form
             className={` rounded-lg p-8 mb-4 w-full max-w-lg`}
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="flex items-center justify-center mb-12 ">
+            <div className="flex flex-col items-center justify-center mb-12 ">
               {/* <img
                 src="./assets/images/firstpage/logo.png"
                 className="hidden lg:block "
@@ -153,6 +161,11 @@ const Login: React.FC = () => {
               <h1 className="text-3xl font-semibold tracking-wider font-quizlang text-green-500 ">
                 QUIZLANG
               </h1>
+              {loginError && (
+                <div className="text-red-600 text-sm mt-1">
+                  <p>{loginError}</p>
+                </div>
+              )}
             </div>
 
             <div className="mb-6 relative">
